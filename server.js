@@ -7,6 +7,7 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 
 const indexRouter = require('./routes/index')
+const customersRouter = require('./routes/customers')
 
 //Basic setup of packages
 app.set('view engine', 'ejs')
@@ -29,5 +30,6 @@ db.once('open', () => console.log("Connected to DB"))
 
 
 app.use('/', indexRouter)
+app.use('/customers', customersRouter)
 
 app.listen(process.env.PORT || 3000)
