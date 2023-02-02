@@ -1,1 +1,11 @@
-all customers
+<h2>Customers List</h2>
+
+<% customers.forEach(customer => { %>
+    <div><%= customer.name %> <%= customer.lastname %> <%= customer.cellphone %> <%= customer.city %> </div>
+
+    <a href="/customers/<%= customer.id %>/edit">Edit</a>
+    
+    <form method="POST" action="/customers/<%= customer.id %>?_method=DELETE">
+        <button type="submit">Delete</button>
+    </form>
+<% }) %> 
