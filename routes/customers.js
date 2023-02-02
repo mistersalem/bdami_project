@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
     })
     try{
         const newCustomer = await customer.save()
-        res.redirect('customers/${newCustomer.id}')
+        res.redirect(`/customers/${newCustomer.id}`)
 
 
     } catch {

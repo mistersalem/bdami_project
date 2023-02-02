@@ -5,4 +5,12 @@ router.get('/', (req, res) => {
     res.render('index')
 })
 
+// login system routes
+router.get('/login', (req, res) => {
+    res.render('login.ejs')
+})
+router.get('/register', (req, res) => {
+    res.render('register.ejs')
+})
+
 module.exports = router
